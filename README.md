@@ -1,11 +1,10 @@
 # there
-Execute commands not here, but `there(1)`.
+Run programs not here, but `there(1)`.
 
 ## Idea
 Managing `kubernetes` clusters can be a hassle. Between `kubectl(1)`,
 `gcloud(1)`, loading configuration files, `terraform(1)`, `docker(1)`,
-`helm(1)` and juggling config files it can be quite a chore to get a
-cluster running.
+`helm(1)` it can be quite a chore to get a cluster running.
 
 `there(1)` offers a coherent interface to interact with computers that are not
 here, but `there(1)` on the `kubernetes` cluster. Hurray for cohesive

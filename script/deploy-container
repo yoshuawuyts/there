@@ -1,0 +1,33 @@
+#!/bin/sh
+
+[ $# -ne 1 ] && { printf 'usage: deploy-container <project_name>\n'; exit 1; }
+
+project_name="$1"
+
+deployment_name="test-cluster"
+image_name="hello-node"
+tag="2.0.0"
+port="8080"
+
+endpoint="gcr.io/$project_name/$image_name:$tag"
+
+printf '[gcloud] uploading container to registry\n'
+sudo gcloud docker push "$endpoint"
+
+printf '\n[kubectl] deploying container to cluster\n'
+kubectl run "$deployment_name" \
+  --image="$endpoint" \
+  --port="$port"
+
+printf '\n[kubectl] exposing container to outside world\n'
+kubectl expose deployment "$deployment_name" --type="LoadBalancer"
+
+sleep 10
+printf '\n[kubectl] list deployments\n'
+kubectl get deployments
+
+printf '\n[kubectl] list services\n'
+kubectl get svc
+
+printf '\n[kubectl] list pods\n'
+kubectl get po

@@ -1,0 +1,9 @@
+#!/bin/sh
+
+[ $# -ne 1 ] && { printf 'usage: build-container <project_name>\n'; exit 1; }
+
+project_name="$1"
+image_name="hello-node"
+tag="2.0.0"
+
+sudo docker build -t gcr.io/"$project_name"/"$image_name":"$tag" ./src

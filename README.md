@@ -15,11 +15,21 @@ interfaces.
 there(1) - Manage remote computers
 
 Commands
-  setup    Configure your local tool
-  init     Create a new instance locally
-  build    Build a new container and upload it to a registry
+  config   Configure your local tool
+  init     Create a new repository locally
+  build    Build a new container and upload it to your registry
   status   Display the status of your remote computers
-  deploy   Deploy a container from the registry to your computers
+  deploy   Deploy a container from your registry to your computers
+
+Flags
+  -h, --help      Print this message
+  -v, --version   Print version information
+
+Examples
+  $ there init
+  $ there build service-gateway
+  $ there status
+  $ there deploy
 ```
 
 ## FAQ

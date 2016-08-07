@@ -1,7 +1,6 @@
 # there
 Run programs not here, but `there(1)`.
 
-## Idea
 Managing `kubernetes` clusters can be a hassle. Between `kubectl(1)`,
 `gcloud(1)`, loading configuration files, `terraform(1)`, `docker(1)`,
 `helm(1)` it can be quite a chore to get a cluster running.
@@ -10,7 +9,13 @@ Managing `kubernetes` clusters can be a hassle. Between `kubectl(1)`,
 here, but `there(1)` on the `kubernetes` cluster. Hurray for cohesive
 interfaces.
 
-## usage
+## Getting Started
+```sh
+$ there config   # configure your local helm instance
+$ there init     # create a new helm repo
+```
+
+## Usage
 ```txt
 there(1) - Manage remote computers
 
@@ -32,6 +37,17 @@ Examples
   $ there deploy
 ```
 
+## Directory layout
+After running `$ there init` a local `there(1)` repository is created
+containing the following files:
+```txt
+helm/         # helm charts
+kubernetes/   # kubernetes manifests
+terraform/    # terraform files
+secrets/      # kubernetes secrets
+README.md
+```
+
 ## FAQ
 ### Why are you building this in Rust?
 `rust` is fun, and I've got to learn it at some point soooo...
@@ -49,7 +65,8 @@ infrastructure the moment I can get it to run. Swoosh.
 - https://github.com/yoshuawuyts/knowledge/tree/master/bin/kubectl.md
 - https://github.com/yoshuawuyts/knowledge/blob/master/bin/gcloud.md
 - https://github.com/yoshuawuyts/knowledge/blob/master/bin/docker.md
-- [sup](https://github.com/pressly/sup)
+- [pressly/sup](https://github.com/pressly/sup)
+- [stamf/shocker](https://github.com/stamf/shocker)
 
 ## License
 [MIT](https://tldrlegal.com/license/mit-license)

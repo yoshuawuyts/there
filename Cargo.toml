@@ -3,5 +3,13 @@ name = "there"
 version = "0.1.0"
 authors = ["Yoshua Wuyts <yoshuawuyts@gmail.com>"]
 
+[[bin]]
+name = "there"
+path = "bin/cli.rs"
+
+[lib]
+name = "lib_there"
+path = "src/main.rs"
+
 [dependencies]
 getopts = "0.2"

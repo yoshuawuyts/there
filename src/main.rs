@@ -34,19 +34,19 @@ fn main () {
 
     match command.trim() {
       "config" => {
-        println!("Command not yet implemented")
+        println!("Command not yet implemented");
       },
       "init" => {
-        println!("Command not yet implemented")
+        println!("Command not yet implemented");
       },
       "build" => {
-        println!("Command not yet implemented")
+        println!("Command not yet implemented");
       },
       "status" => {
-        println!("Command not yet implemented")
+        println!("Command not yet implemented");
       },
       "deploy" => {
-        println!("Command not yet implemented")
+        println!("Command not yet implemented");
       },
       _ => {
         println!("Error: unknown command '{}'\n", command.trim());

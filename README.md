@@ -5,7 +5,7 @@ Run programs not here, but `there(1)`.
 Managing `kubernetes` clusters can be a hassle. Between `kubectl(1)`,
 `gcloud(1)`, loading configuration files, `terraform(1)`, `docker(1)`,
 `helm(1)` it can be quite a chore to get a cluster running.
-
+\
 `there(1)` offers a coherent interface to interact with computers that are not
 here, but `there(1)` on the `kubernetes` cluster. Hurray for cohesive
 interfaces.
@@ -39,6 +39,7 @@ infrastructure the moment I can get it to run. Swoosh.
 - https://github.com/yoshuawuyts/knowledge/tree/master/bin/kubectl.md
 - https://github.com/yoshuawuyts/knowledge/blob/master/bin/gcloud.md
 - https://github.com/yoshuawuyts/knowledge/blob/master/bin/docker.md
+- [sup](https://github.com/pressly/sup)
 
 ## License
 [MIT](https://tldrlegal.com/license/mit-license)
